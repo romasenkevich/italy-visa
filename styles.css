@@ -430,6 +430,16 @@ main {
   color: var(--green);
 }
 
+.help-summary {
+  margin: 1.15rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
 .help-lead {
   margin: 0 0 0.15rem;
   color: var(--muted);
