@@ -6,7 +6,8 @@
   const byn = (eur) => Math.ceil(eur * EUR_TO_BYN);
   const formatEur = (n) =>
     Math.round(Number(n)).toLocaleString("ru-RU", { maximumFractionDigits: 0 });
-  const money = (eur) => `${formatEur(eur)} € (~${byn(eur)} BYN)`;
+  const money = (eur) =>
+    `${formatEur(eur)} € <span class="pay-note">(${byn(eur)} BYN)</span>`;
 
   const $ = (id) => document.getElementById(id);
 
