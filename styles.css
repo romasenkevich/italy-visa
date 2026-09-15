@@ -604,6 +604,22 @@ input[type="number"] {
   font-size: 0.9rem;
 }
 
+.calc-note p {
+  margin: 0 0 0.35rem;
+}
+
+.calc-note p:last-child {
+  margin-bottom: 0;
+}
+
+.pay-note {
+  display: inline;
+  font-size: 0.82em;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+}
+
 .calc-result {
   padding: 0.95rem 1rem;
   border-radius: 14px;

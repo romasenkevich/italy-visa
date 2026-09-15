@@ -75,7 +75,7 @@
     const total = consular + service;
     feeResult.innerHTML = `
       <div class="lines">
-        <div>Консульский сбор: ${money(consular)}</div>
+        <div>Консульский сбор: ${money(consular)} <span class="pay-note">(ребёнок до 12 лет — бесплатно)</span></div>
         <div>Сервисный сбор VFS: ${money(service)}</div>
       </div>
       <div class="total">Итого ориентир: ${money(total)}</div>
