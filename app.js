@@ -265,4 +265,23 @@
   helpBooking.addEventListener("change", renderHelp);
   helpDocs.addEventListener("change", renderHelp);
   renderHelp();
+
+  // --- DIY / Help choice tabs ---
+  const choiceTabs = document.querySelectorAll(".choice-tab");
+  const panelDiy = document.getElementById("panel-diy");
+  const panelHelp = document.getElementById("panel-help");
+
+  function setChoice(which) {
+    choiceTabs.forEach((tab) => {
+      const on = tab.dataset.choice === which;
+      tab.classList.toggle("is-active", on);
+      tab.setAttribute("aria-selected", String(on));
+    });
+    panelDiy.hidden = which !== "diy";
+    panelHelp.hidden = which !== "help";
+  }
+
+  choiceTabs.forEach((tab) => {
+    tab.addEventListener("click", () => setChoice(tab.dataset.choice));
+  });
 })();

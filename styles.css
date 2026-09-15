@@ -315,6 +315,64 @@ main {
   border: 0;
 }
 
+.section-note.tight {
+  margin-top: 1rem;
+}
+
+.choice-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin: 0 0 1rem;
+  max-width: 720px;
+}
+
+.choice-tab {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 249, 0.7);
+  color: var(--ink-soft);
+  border-radius: 999px;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.choice-tab:hover {
+  transform: translateY(-1px);
+  border-color: rgba(0, 140, 69, 0.35);
+}
+
+.choice-tab.is-active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+.choice-panel {
+  max-width: 720px;
+}
+
+.diy-card {
+  padding: 1.25rem 1.35rem;
+  background: rgba(255, 253, 249, 0.86);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1rem;
+}
+
+.diy-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
 .diy {
   margin: 1.5rem 0 0;
   padding: 1.1rem 1.25rem;
@@ -427,6 +485,10 @@ main {
 .doc-live.nested {
   box-shadow: none;
   background: rgba(255, 253, 249, 0.55);
+}
+
+.section-choice .help-calc {
+  max-width: 560px;
 }
 
 .section-help {
@@ -561,6 +623,10 @@ input[type="number"] {
 
   .path-figure {
     padding: 0.45rem;
+  }
+
+  .choice-tabs {
+    grid-template-columns: 1fr;
   }
 }
 
