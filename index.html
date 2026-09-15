@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Шаги к получению визы — Италия Schengen C</title>
+  <meta name="description" content="Простые шаги к туристической визе в Италию: лист ожидания, документы, калькуляторы сборов и выписки." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="flag-rail" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <p class="brand">Италия · Schengen C</p>
+    <h1>Шаги к получению визы</h1>
+    <p class="lede">Коротко: что делать по туристической визе и сколько это стоит. Без лишнего шума.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://t.me/LLlBiDKiCLLb" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn btn-ghost" href="#steps">Смотреть шаги</a>
+    </div>
+    <div class="flag-mark" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <main>
+    <section id="steps" class="section">
+      <h2>Как проходит путь</h2>
+      <p class="section-note">Ориентиры по срокам — примерные. Очередь живая, цифры могут сдвигаться.</p>
+      <ol class="timeline">
+        <li>
+          <strong>Запись в лист ожидания</strong>
+          <span>Регистрация в VFS / лист ожидания.</span>
+        </li>
+        <li>
+          <strong>Ожидание 6–10 месяцев</strong>
+          <span>Ориентировочно, пока не откроют слоты.</span>
+        </li>
+        <li>
+          <strong>Выбор даты и времени подачи</strong>
+          <span>После письма от ВЦ — забронировать приём.</span>
+        </li>
+        <li>
+          <strong>Подготовка документов</strong>
+          <span>Пакет под вашу ситуацию — квиз ниже.</span>
+        </li>
+        <li>
+          <strong>Подача документов</strong>
+          <span>Визит в визовый центр.</span>
+        </li>
+        <li>
+          <strong>Ожидание 2–3 недели</strong>
+          <span>Рассмотрение в консульстве.</span>
+        </li>
+        <li>
+          <strong>Получение паспорта</strong>
+          <span>Забрать готовый паспорт в ВЦ.</span>
+        </li>
+      </ol>
+      <p class="diy">
+        Все шаги можно пройти самостоятельно: в группе
+        <a href="https://t.me/italyrbdaty" target="_blank" rel="noopener">@italyrbdaty</a>
+        собраны методичка, советы и актуальные нюансы. Если удобнее с поддержкой — напишите мне.
+      </p>
+    </section>
+
+    <section id="docs" class="section">
+      <h2>Документы под вашу ситуацию</h2>
+      <p class="section-note">Отвечайте по шагам — список справа (на телефоне — ниже) обновляется сразу.</p>
+
+      <div class="quiz-layout">
+        <div class="quiz-panel">
+          <button type="button" class="btn btn-primary" id="quiz-start">Получить список документов для меня</button>
+          <form id="quiz-form" class="quiz-form" hidden>
+            <fieldset data-step="age">
+              <legend>Вам есть 18 лет?</legend>
+              <label><input type="radio" name="adult" value="yes" /> Да, я совершеннолетний</label>
+              <label><input type="radio" name="adult" value="no" /> Нет, мне меньше 18</label>
+            </fieldset>
+
+            <fieldset data-step="minor" hidden>
+              <legend>Как подаётесь?</legend>
+              <label><input type="radio" name="minorMode" value="one" /> С одним родителем</label>
+              <label><input type="radio" name="minorMode" value="both" /> С обоими родителями</label>
+              <label><input type="radio" name="minorMode" value="none" /> Без родителей</label>
+            </fieldset>
+
+            <fieldset data-step="work" hidden>
+              <legend>Ваш статус</legend>
+              <label><input type="radio" name="work" value="employed" /> Работаю в найме</label>
+              <label><input type="radio" name="work" value="ip" /> ИП</label>
+              <label><input type="radio" name="work" value="self" /> Самозанятый</label>
+              <label><input type="radio" name="work" value="unemployed" /> Безработный</label>
+            </fieldset>
+
+            <fieldset data-step="car" hidden>
+              <legend>Есть автомобиль, оформленный на вас?</legend>
+              <label><input type="radio" name="car" value="yes" /> Да</label>
+              <label><input type="radio" name="car" value="no" /> Нет</label>
+            </fieldset>
+
+            <fieldset data-step="italy" hidden>
+              <legend>Были в Италии раньше?</legend>
+              <label><input type="radio" name="italy" value="yes" /> Да</label>
+              <label><input type="radio" name="italy" value="no" /> Нет</label>
+            </fieldset>
+          </form>
+        </div>
+
+        <aside class="doc-live" id="doc-live" aria-live="polite">
+          <h3>Ваш список</h3>
+          <p class="doc-hint" id="doc-hint">Нажмите кнопку слева, чтобы начать. Базовый список появится сразу и будет уточняться.</p>
+          <ol id="doc-list"></ol>
+        </aside>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <h2>Посчитать суммы</h2>
+      <p class="section-note">Сборы и выписка — по официальным ориентирам. В скобках — примерно в BYN, округление вверх.</p>
+
+      <div class="accordions">
+        <div class="accordion">
+          <button type="button" class="accordion-btn" aria-expanded="false" data-acc="fees">
+            Сборы визовые и консульские
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="acc-fees" hidden>
+            <div class="calc-grid">
+              <label>Взрослые (12+)
+                <input type="number" id="fee-adults" min="0" value="1" />
+              </label>
+              <label>Дети (до 12 лет)
+                <input type="number" id="fee-kids" min="0" value="0" />
+              </label>
+            </div>
+            <p class="calc-note">Для граждан Беларуси. Консульский: 35€ / ребёнок до 12 лет — 0€. Сервис VFS: ~16,80€ с каждого заявителя.</p>
+            <div class="calc-result" id="fee-result"></div>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <button type="button" class="accordion-btn" aria-expanded="false" data-acc="bank">
+            Сумма для выписки
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="acc-bank" hidden>
+            <div class="calc-grid">
+              <label>Дней в Италии
+                <input type="number" id="bank-days" min="1" value="7" />
+              </label>
+              <label>Человек в поездке
+                <input type="number" id="bank-people" min="1" value="1" />
+              </label>
+            </div>
+            <p class="calc-note">По итальянской таблице средств на пребывание. Это минимум для обоснования; на практике часто держат запас.</p>
+            <div class="calc-result" id="bank-result"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="help" class="section section-help">
+      <h2>Помощь с оформлением</h2>
+      <p class="section-note">Символические цены «для своих». Не консульский сбор и не услуги VFS.</p>
+
+      <div class="help-calc">
+        <div class="calc-grid">
+          <label>Взрослые (18+)
+            <input type="number" id="help-adults" min="0" value="1" />
+          </label>
+          <label>Дети (до 18)
+            <input type="number" id="help-kids" min="0" value="0" />
+          </label>
+        </div>
+
+        <label class="check">
+          <input type="checkbox" id="help-booking" />
+          Помощь с записью — 50 BYN за взрослого, дети бесплатно
+        </label>
+        <label class="check">
+          <input type="checkbox" id="help-docs" />
+          Помощь с документами — 100 BYN за каждого человека
+        </label>
+
+        <div class="calc-result" id="help-result"></div>
+
+        <a class="btn btn-primary btn-wide" href="https://t.me/LLlBiDKiCLLb" target="_blank" rel="noopener">Написать @LLlBiDKiCLLb</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Неофициальная памятка. Сроки ориентировочные. Цены за помощь — отдельно от сборов ВЦ и консульства. За актуальностью требований — в консульство, VFS или группу <a href="https://t.me/italyrbdaty" target="_blank" rel="noopener">@italyrbdaty</a>.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
