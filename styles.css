@@ -246,37 +246,6 @@ main {
     font-size: 1.3rem;
   }
 
-  .path-row-trio {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
-    gap: 0.65rem;
-  }
-
-  .path-across {
-    display: block;
-    width: 2.2rem;
-    height: 2px;
-    background: linear-gradient(90deg, var(--green), var(--red));
-    position: relative;
-    flex: 0 0 auto;
-  }
-
-  .path-across::after {
-    content: "";
-    position: absolute;
-    right: -1px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-style: solid;
-    border-width: 5px 0 5px 8px;
-    border-color: transparent transparent transparent var(--red);
-  }
-
-  .path-step {
-    min-height: 7.5rem;
-  }
-
   .quiz-layout {
     grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
     gap: 1.5rem;
@@ -321,99 +290,33 @@ main {
   max-width: 40rem;
 }
 
-.path {
-  display: grid;
-  gap: 0.35rem;
-  margin: 0 auto;
-  max-width: 920px;
-}
-
-.path-row-single {
-  display: flex;
-  justify-content: center;
-}
-
-.path-row-single .path-step {
-  width: min(100%, 280px);
-}
-
-.path-row-trio {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.path-across {
-  display: none;
-}
-
-.path-step {
-  display: grid;
-  gap: 0.5rem;
-  justify-items: start;
-  padding: 1.05rem 1.15rem;
-  background: rgba(255, 253, 249, 0.86);
+.path-figure {
+  margin: 0;
+  padding: 0.75rem;
+  background: rgba(255, 253, 249, 0.72);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: calc(var(--radius) + 4px);
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
-.path-step-final {
-  border-color: rgba(0, 140, 69, 0.35);
-  background:
-    linear-gradient(135deg, rgba(0, 140, 69, 0.1), rgba(255, 253, 249, 0.9));
+.path-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
 }
 
-.path-num {
-  display: grid;
-  place-items: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--cream);
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.path-step strong {
-  font-size: 1.02rem;
-  line-height: 1.3;
-  font-weight: 700;
-}
-
-.path-down {
-  display: grid;
-  justify-items: center;
-  gap: 0.4rem;
-  padding: 0.55rem 0 0.7rem;
-}
-
-.path-down-arrow {
-  position: relative;
-  width: 2px;
-  height: 2rem;
-  background: linear-gradient(180deg, var(--green), var(--red));
-  border-radius: 2px;
-}
-
-.path-down-arrow::after {
-  content: "";
+.path-sr-only {
   position: absolute;
-  left: 50%;
-  bottom: -1px;
-  transform: translateX(-50%);
-  border-style: solid;
-  border-width: 9px 6px 0 6px;
-  border-color: var(--red) transparent transparent transparent;
-}
-
-.path-wait {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--red);
-  letter-spacing: 0.01em;
-  text-align: center;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .diy {
@@ -642,19 +545,8 @@ input[type="number"] {
     position: static;
   }
 
-  /* On phone: show small down chevrons between trio steps */
-  .path-row-trio .path-step + .path-step {
-    position: relative;
-  }
-
-  .path-row-trio .path-step:not(:first-child)::before {
-    content: "";
-    position: absolute;
-    top: -0.55rem;
-    left: 1.6rem;
-    width: 2px;
-    height: 0.45rem;
-    background: var(--green);
+  .path-figure {
+    padding: 0.45rem;
   }
 }
 
@@ -664,5 +556,9 @@ input[type="number"] {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  .hero-media img {
+    transform: none;
   }
 }
