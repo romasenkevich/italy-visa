@@ -28,8 +28,8 @@
 
     helpResult.innerHTML = `
       <div class="lines">
-        <div>Запись: ${booking} BYN — оплачивается в день записи</div>
-        <div>Документы: ${docs} BYN — оплачивается на шаге 3, когда выбрана дата подачи</div>
+        <div>Запись: ${booking} BYN <span class="pay-note">(оплачивается в день записи)</span></div>
+        <div>Документы: ${docs} BYN <span class="pay-note">(оплачивается на шаге 3, когда выбрана дата подачи)</span></div>
       </div>
       <div class="total">Итого за помощь: ${total} BYN</div>
     `;
