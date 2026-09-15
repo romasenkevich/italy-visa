@@ -21,7 +21,7 @@
     <div class="hero-content">
       <div class="hero-top">
         <p class="brand">Италия · Schengen C</p>
-        <span class="version" title="Версия сайта">v1.5.0</span>
+        <span class="version" title="Версия сайта">v1.6.0</span>
       </div>
       <h1>Шаги к получению визы</h1>
       <p class="lede">Коротко: что делать по туристической визе и сколько это стоит. Без лишнего шума.</p>
@@ -40,18 +40,22 @@
       <figure class="path-figure">
         <img
           src="assets/visa-path-diagram.png"
-          alt="Схема: 1 запись в лист ожидания, ожидание 6–8 месяцев, затем выбор даты, подготовка и подача документов, ожидание 2–3 недели, получение паспорта"
+          alt="Схема пути: запись, ожидание 6–8 месяцев, выбор даты, подготовка и подача документов, ожидание 2–3 недели, получение паспорта. Зелёные звёздочки — шаги, с которыми могу помочь."
           width="1600"
           height="1200"
           loading="lazy"
         />
       </figure>
 
+      <p class="star-legend" aria-hidden="true">
+        <span class="star">★</span> шаги, с которыми я могу вам помочь
+      </p>
+
       <ol class="path-sr-only">
-        <li>Запись в лист ожидания</li>
+        <li>Запись в лист ожидания (могу помочь)</li>
         <li>Ожидание 6–8 месяцев</li>
         <li>Выбор даты и времени подачи</li>
-        <li>Подготовка документов</li>
+        <li>Подготовка документов (могу помочь)</li>
         <li>Подача документов</li>
         <li>Ожидание 2–3 недели</li>
         <li>Получение паспорта</li>
@@ -62,104 +66,6 @@
         <a href="https://t.me/italyrbdaty" target="_blank" rel="noopener">@italyrbdaty</a>
         собраны методичка, советы и актуальные нюансы. Если удобнее с поддержкой — напишите мне.
       </p>
-    </section>
-
-    <section id="docs" class="section">
-      <h2>Документы под вашу ситуацию</h2>
-      <p class="section-note">Отвечайте по шагам — список справа (на телефоне — ниже) обновляется сразу.</p>
-
-      <div class="quiz-layout">
-        <div class="quiz-panel">
-          <button type="button" class="btn btn-primary" id="quiz-start">Получить список документов для меня</button>
-          <form id="quiz-form" class="quiz-form" hidden>
-            <fieldset data-step="age">
-              <legend>Вам есть 18 лет?</legend>
-              <label><input type="radio" name="adult" value="yes" /> Да, я совершеннолетний</label>
-              <label><input type="radio" name="adult" value="no" /> Нет, мне меньше 18</label>
-            </fieldset>
-
-            <fieldset data-step="minor" hidden>
-              <legend>Как подаётесь?</legend>
-              <label><input type="radio" name="minorMode" value="one" /> С одним родителем</label>
-              <label><input type="radio" name="minorMode" value="both" /> С обоими родителями</label>
-              <label><input type="radio" name="minorMode" value="none" /> Без родителей</label>
-            </fieldset>
-
-            <fieldset data-step="work" hidden>
-              <legend>Ваш статус</legend>
-              <label><input type="radio" name="work" value="employed" /> Работаю в найме</label>
-              <label><input type="radio" name="work" value="ip" /> ИП</label>
-              <label><input type="radio" name="work" value="self" /> Самозанятый</label>
-              <label><input type="radio" name="work" value="unemployed" /> Безработный</label>
-            </fieldset>
-
-            <fieldset data-step="car" hidden>
-              <legend>Есть автомобиль, оформленный на вас?</legend>
-              <label><input type="radio" name="car" value="yes" /> Да</label>
-              <label><input type="radio" name="car" value="no" /> Нет</label>
-            </fieldset>
-
-            <fieldset data-step="italy" hidden>
-              <legend>Были в Италии раньше?</legend>
-              <label><input type="radio" name="italy" value="yes" /> Да</label>
-              <label><input type="radio" name="italy" value="no" /> Нет</label>
-            </fieldset>
-          </form>
-        </div>
-
-        <aside class="doc-live" id="doc-live" aria-live="polite">
-          <h3>Ваш список</h3>
-          <p class="doc-hint" id="doc-hint">Нажмите кнопку слева, чтобы начать. Базовый список появится сразу и будет уточняться.</p>
-          <ol id="doc-list"></ol>
-        </aside>
-      </div>
-    </section>
-
-    <section id="tools" class="section">
-      <h2>Посчитать суммы</h2>
-      <p class="section-note">Сборы и выписка — по официальным ориентирам. В скобках — примерно в BYN, округление вверх.</p>
-
-      <div class="tools-row">
-        <div class="accordions">
-          <div class="accordion">
-            <button type="button" class="accordion-btn" aria-expanded="false" data-acc="fees">
-              Сборы визовые и консульские
-              <span class="chev" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-panel" id="acc-fees" hidden>
-              <div class="calc-grid">
-                <label>Взрослые (12+)
-                  <input type="number" id="fee-adults" min="0" value="1" />
-                </label>
-                <label>Дети (до 12 лет)
-                  <input type="number" id="fee-kids" min="0" value="0" />
-                </label>
-              </div>
-              <p class="calc-note">Для граждан Беларуси. Консульский: 35€ / ребёнок до 12 лет — 0€. Сервис VFS: ~16,80€ с каждого заявителя.</p>
-              <div class="calc-result" id="fee-result"></div>
-            </div>
-          </div>
-
-          <div class="accordion">
-            <button type="button" class="accordion-btn" aria-expanded="false" data-acc="bank">
-              Сумма для выписки
-              <span class="chev" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-panel" id="acc-bank" hidden>
-              <div class="calc-grid">
-                <label>Дней в Италии
-                  <input type="number" id="bank-days" min="1" value="7" />
-                </label>
-                <label>Человек в поездке
-                  <input type="number" id="bank-people" min="1" value="1" />
-                </label>
-              </div>
-              <p class="calc-note">По итальянской таблице средств на пребывание. Это минимум для обоснования; на практике часто держат запас.</p>
-              <div class="calc-result" id="bank-result"></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="help" class="section section-help">
@@ -188,6 +94,106 @@
         <div class="calc-result" id="help-result"></div>
 
         <a class="btn btn-primary btn-wide" href="https://t.me/LLlBiDKiCLLb" target="_blank" rel="noopener">Написать @LLlBiDKiCLLb</a>
+      </div>
+    </section>
+
+    <section id="more" class="section">
+      <h2>Ещё полезное</h2>
+      <p class="section-note">Откройте нужный блок — по умолчанию всё закрыто.</p>
+
+      <div class="accordions stacked">
+        <div class="accordion">
+          <button type="button" class="accordion-btn" aria-expanded="false" data-acc="docs">
+            Полный список документов
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="acc-docs" hidden>
+            <p class="calc-note">Отвечайте по шагам — список обновляется сразу.</p>
+            <div class="quiz-layout">
+              <div class="quiz-panel nested">
+                <button type="button" class="btn btn-primary" id="quiz-start">Получить список документов для меня</button>
+                <form id="quiz-form" class="quiz-form" hidden>
+                  <fieldset data-step="age">
+                    <legend>Вам есть 18 лет?</legend>
+                    <label><input type="radio" name="adult" value="yes" /> Да, я совершеннолетний</label>
+                    <label><input type="radio" name="adult" value="no" /> Нет, мне меньше 18</label>
+                  </fieldset>
+
+                  <fieldset data-step="minor" hidden>
+                    <legend>Как подаётесь?</legend>
+                    <label><input type="radio" name="minorMode" value="one" /> С одним родителем</label>
+                    <label><input type="radio" name="minorMode" value="both" /> С обоими родителями</label>
+                    <label><input type="radio" name="minorMode" value="none" /> Без родителей</label>
+                  </fieldset>
+
+                  <fieldset data-step="work" hidden>
+                    <legend>Ваш статус</legend>
+                    <label><input type="radio" name="work" value="employed" /> Работаю в найме</label>
+                    <label><input type="radio" name="work" value="ip" /> ИП</label>
+                    <label><input type="radio" name="work" value="self" /> Самозанятый</label>
+                    <label><input type="radio" name="work" value="unemployed" /> Безработный</label>
+                  </fieldset>
+
+                  <fieldset data-step="car" hidden>
+                    <legend>Есть автомобиль, оформленный на вас?</legend>
+                    <label><input type="radio" name="car" value="yes" /> Да</label>
+                    <label><input type="radio" name="car" value="no" /> Нет</label>
+                  </fieldset>
+
+                  <fieldset data-step="italy" hidden>
+                    <legend>Были в Италии раньше?</legend>
+                    <label><input type="radio" name="italy" value="yes" /> Да</label>
+                    <label><input type="radio" name="italy" value="no" /> Нет</label>
+                  </fieldset>
+                </form>
+              </div>
+
+              <aside class="doc-live nested" id="doc-live" aria-live="polite">
+                <h3>Ваш список</h3>
+                <p class="doc-hint" id="doc-hint">Нажмите кнопку, чтобы начать. Базовый список появится сразу и будет уточняться.</p>
+                <ol id="doc-list"></ol>
+              </aside>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <button type="button" class="accordion-btn" aria-expanded="false" data-acc="fees">
+            Посчитать сумму визовых и консульских сборов
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="acc-fees" hidden>
+            <div class="calc-grid">
+              <label>Взрослые (12+)
+                <input type="number" id="fee-adults" min="0" value="1" />
+              </label>
+              <label>Дети (до 12 лет)
+                <input type="number" id="fee-kids" min="0" value="0" />
+              </label>
+            </div>
+            <p class="calc-note">Для граждан Беларуси. Консульский: 35€ / ребёнок до 12 лет — 0€. Сервис VFS: ~16,80€ с каждого заявителя. В скобках — примерно в BYN, округление вверх.</p>
+            <div class="calc-result" id="fee-result"></div>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <button type="button" class="accordion-btn" aria-expanded="false" data-acc="bank">
+            Посчитать сумму для выписки
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="acc-bank" hidden>
+            <div class="calc-grid">
+              <label>Дней в Италии
+                <input type="number" id="bank-days" min="1" value="7" />
+              </label>
+              <label>Человек в поездке
+                <input type="number" id="bank-people" min="1" value="1" />
+              </label>
+            </div>
+            <p class="calc-note">По итальянской таблице средств на пребывание. Это минимум для обоснования; на практике часто держат запас. В скобках — примерно в BYN, округление вверх.</p>
+            <div class="calc-result" id="bank-result"></div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
