@@ -21,7 +21,7 @@
     <div class="hero-content">
       <div class="hero-top">
         <p class="brand">Италия · Schengen C</p>
-        <span class="version" title="Версия сайта">v1.7.0</span>
+        <span class="version" title="Версия сайта">v1.7.1</span>
       </div>
       <h1>Шаги к получению визы</h1>
       <p class="lede">Коротко: что делать по туристической визе и сколько это стоит. Без лишнего шума.</p>
@@ -62,77 +62,79 @@
       <h2>Как хотите пройти путь</h2>
       <p class="section-note">Выберите вариант — контент ниже меняется на месте.</p>
 
-      <div class="choice-tabs" role="tablist" aria-label="Способ прохождения">
-        <button
-          type="button"
-          class="choice-tab"
-          role="tab"
-          id="tab-diy"
-          aria-selected="false"
-          aria-controls="panel-diy"
-          data-choice="diy"
-        >
-          Хочу разобраться во всём сам
-        </button>
-        <button
-          type="button"
-          class="choice-tab is-active"
-          role="tab"
-          id="tab-help"
-          aria-selected="true"
-          aria-controls="panel-help"
-          data-choice="help"
-        >
-          Нужна помощь
-        </button>
-      </div>
-
-      <div
-        class="choice-panel"
-        id="panel-diy"
-        role="tabpanel"
-        aria-labelledby="tab-diy"
-        hidden
-      >
-        <div class="diy-card">
-          <p>
-            Если хотите разобраться сами — в группе
-            <a href="https://t.me/italyrbdaty" target="_blank" rel="noopener">@italyrbdaty</a>
-            есть вся нужная информация по шагам: методичка, советы и актуальные нюансы.
-          </p>
-          <a class="btn btn-primary" href="https://t.me/italyrbdaty" target="_blank" rel="noopener">Открыть @italyrbdaty</a>
+      <div class="choice-shell">
+        <div class="choice-tabs" role="tablist" aria-label="Способ прохождения">
+          <button
+            type="button"
+            class="choice-tab"
+            role="tab"
+            id="tab-diy"
+            aria-selected="false"
+            aria-controls="panel-diy"
+            data-choice="diy"
+          >
+            Хочу разобраться во всём сам
+          </button>
+          <button
+            type="button"
+            class="choice-tab is-active"
+            role="tab"
+            id="tab-help"
+            aria-selected="true"
+            aria-controls="panel-help"
+            data-choice="help"
+          >
+            Нужна помощь
+          </button>
         </div>
-      </div>
 
-      <div
-        class="choice-panel"
-        id="panel-help"
-        role="tabpanel"
-        aria-labelledby="tab-help"
-      >
-        <p class="section-note tight">Символические цены «для своих». Не консульский сбор и не услуги VFS. Помогаю с шагами ★.</p>
-        <div class="help-calc">
-          <div class="calc-grid">
-            <label>Взрослые (18+)
-              <input type="number" id="help-adults" min="0" value="1" />
-            </label>
-            <label>Дети (до 18)
-              <input type="number" id="help-kids" min="0" value="0" />
-            </label>
+        <div
+          class="choice-panel"
+          id="panel-diy"
+          role="tabpanel"
+          aria-labelledby="tab-diy"
+          hidden
+        >
+          <div class="diy-card">
+            <p>
+              Если хотите разобраться сами — в группе
+              <a href="https://t.me/italyrbdaty" target="_blank" rel="noopener">@italyrbdaty</a>
+              есть вся нужная информация по шагам: методичка, советы и актуальные нюансы.
+            </p>
+            <a class="btn btn-primary" href="https://t.me/italyrbdaty" target="_blank" rel="noopener">Открыть @italyrbdaty</a>
           </div>
+        </div>
 
-          <label class="check">
-            <input type="checkbox" id="help-booking" />
-            Помощь с записью — 50 BYN за взрослого, дети бесплатно
-          </label>
-          <label class="check">
-            <input type="checkbox" id="help-docs" />
-            Помощь с документами — 100 BYN за каждого человека
-          </label>
+        <div
+          class="choice-panel"
+          id="panel-help"
+          role="tabpanel"
+          aria-labelledby="tab-help"
+        >
+          <div class="help-calc">
+            <p class="help-lead">Символические цены «для своих». Не консульский сбор и не услуги VFS. Помогаю с шагами ★.</p>
+            <div class="calc-grid">
+              <label>Взрослые (18+)
+                <input type="number" id="help-adults" min="0" value="1" />
+              </label>
+              <label>Дети (до 18)
+                <input type="number" id="help-kids" min="0" value="0" />
+              </label>
+            </div>
 
-          <div class="calc-result" id="help-result"></div>
+            <label class="check">
+              <input type="checkbox" id="help-booking" />
+              Помощь с записью — 50 BYN за взрослого, дети бесплатно
+            </label>
+            <label class="check">
+              <input type="checkbox" id="help-docs" />
+              Помощь с документами — 100 BYN за каждого человека
+            </label>
 
-          <a class="btn btn-primary btn-wide" href="https://t.me/LLlBiDKiCLLb" target="_blank" rel="noopener">Написать @LLlBiDKiCLLb</a>
+            <div class="calc-result" id="help-result"></div>
+
+            <a class="btn btn-primary btn-wide" href="https://t.me/LLlBiDKiCLLb" target="_blank" rel="noopener">Написать @LLlBiDKiCLLb</a>
+          </div>
         </div>
       </div>
     </section>
