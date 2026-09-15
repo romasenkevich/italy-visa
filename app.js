@@ -1,6 +1,6 @@
 (() => {
   const EUR_TO_BYN = 55.61 / 16.8;
-  const SERVICE_EUR = 16.8;
+  const SERVICE_EUR = 17;
   const CONSULAR_EUR = 35;
 
   const byn = (eur) => Math.ceil(eur * EUR_TO_BYN);
