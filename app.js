@@ -5,7 +5,7 @@
 
   const byn = (eur) => Math.ceil(eur * EUR_TO_BYN);
   const formatEur = (n) =>
-    Number(n).toLocaleString("ru-RU", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+    Math.round(Number(n)).toLocaleString("ru-RU", { maximumFractionDigits: 0 });
   const money = (eur) => `${formatEur(eur)} € (~${byn(eur)} BYN)`;
 
   const $ = (id) => document.getElementById(id);
@@ -88,6 +88,8 @@
   // --- Bank / means calculator ---
   const bankDays = $("bank-days");
   const bankPeople = $("bank-people");
+  const bankHotel = $("bank-hotel");
+  const bankTickets = $("bank-tickets");
   const bankResult = $("bank-result");
 
   function meansPerPerson(days, people) {
@@ -108,18 +110,25 @@
     if (!bankDays || !bankPeople || !bankResult) return;
     const days = Math.max(1, Number(bankDays.value) || 1);
     const people = Math.max(1, Number(bankPeople.value) || 1);
+    const hotel = Math.max(0, Number(bankHotel && bankHotel.value) || 0);
+    const tickets = Math.max(0, Number(bankTickets && bankTickets.value) || 0);
     const per = meansPerPerson(days, people);
-    const total = per * people;
+    const stay = per * people;
+    const total = stay + hotel + tickets;
     bankResult.innerHTML = `
       <div class="lines">
-        <div>На одного: ${money(per)}</div>
+        <div>Средства на пребывание: ${money(stay)}</div>
+        <div>Отель: ${money(hotel)}</div>
+        <div>Билеты: ${money(tickets)}</div>
         <div>Людей: ${people}, дней: ${days}</div>
       </div>
-      <div class="total">Минимум на выписку (все): ${money(total)}</div>
+      <div class="total">Минимум на выписку: ${money(total)}</div>
     `;
   }
 
-  [bankDays, bankPeople].forEach((el) => el && el.addEventListener("input", renderBank));
+  [bankDays, bankPeople, bankHotel, bankTickets].forEach(
+    (el) => el && el.addEventListener("input", renderBank)
+  );
   renderBank();
 
   // --- Accordions ---
