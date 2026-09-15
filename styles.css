@@ -612,6 +612,10 @@ input[type="number"] {
   margin-bottom: 0;
 }
 
+.calc-note .pay-note {
+  display: block;
+}
+
 .fee-rates {
   display: grid;
   gap: 0.45rem;
