@@ -116,12 +116,6 @@
     const stay = per * people;
     const total = stay + hotel + tickets;
     bankResult.innerHTML = `
-      <div class="lines">
-        <div>Средства на пребывание: ${money(stay)}</div>
-        <div>Отель: ${money(hotel)}</div>
-        <div>Билеты: ${money(tickets)}</div>
-        <div>Людей: ${people}, дней: ${days}</div>
-      </div>
       <div class="total">Минимум на выписку: ${money(total)}</div>
     `;
   }
