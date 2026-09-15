@@ -102,11 +102,14 @@ a {
 
 .brand {
   margin: 0;
-  font-size: 0.85rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255, 250, 243, 0.78);
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 4.2vw, 2.6rem);
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: #fffaf3;
+  font-weight: 700;
+  line-height: 1.08;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
 }
 
 .version {
@@ -237,8 +240,7 @@ main {
     padding-top: 1.8rem;
   }
 
-  .hero h1 {
-    max-width: 16ch;
+  .brand {
     font-size: clamp(2rem, 3.2vw, 2.8rem);
   }
 
