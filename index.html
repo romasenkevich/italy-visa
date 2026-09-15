@@ -123,42 +123,44 @@
       <h2>Посчитать суммы</h2>
       <p class="section-note">Сборы и выписка — по официальным ориентирам. В скобках — примерно в BYN, округление вверх.</p>
 
-      <div class="accordions">
-        <div class="accordion">
-          <button type="button" class="accordion-btn" aria-expanded="false" data-acc="fees">
-            Сборы визовые и консульские
-            <span class="chev" aria-hidden="true"></span>
-          </button>
-          <div class="accordion-panel" id="acc-fees" hidden>
-            <div class="calc-grid">
-              <label>Взрослые (12+)
-                <input type="number" id="fee-adults" min="0" value="1" />
-              </label>
-              <label>Дети (до 12 лет)
-                <input type="number" id="fee-kids" min="0" value="0" />
-              </label>
+      <div class="tools-row">
+        <div class="accordions">
+          <div class="accordion">
+            <button type="button" class="accordion-btn" aria-expanded="false" data-acc="fees">
+              Сборы визовые и консульские
+              <span class="chev" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-panel" id="acc-fees" hidden>
+              <div class="calc-grid">
+                <label>Взрослые (12+)
+                  <input type="number" id="fee-adults" min="0" value="1" />
+                </label>
+                <label>Дети (до 12 лет)
+                  <input type="number" id="fee-kids" min="0" value="0" />
+                </label>
+              </div>
+              <p class="calc-note">Для граждан Беларуси. Консульский: 35€ / ребёнок до 12 лет — 0€. Сервис VFS: ~16,80€ с каждого заявителя.</p>
+              <div class="calc-result" id="fee-result"></div>
             </div>
-            <p class="calc-note">Для граждан Беларуси. Консульский: 35€ / ребёнок до 12 лет — 0€. Сервис VFS: ~16,80€ с каждого заявителя.</p>
-            <div class="calc-result" id="fee-result"></div>
           </div>
-        </div>
 
-        <div class="accordion">
-          <button type="button" class="accordion-btn" aria-expanded="false" data-acc="bank">
-            Сумма для выписки
-            <span class="chev" aria-hidden="true"></span>
-          </button>
-          <div class="accordion-panel" id="acc-bank" hidden>
-            <div class="calc-grid">
-              <label>Дней в Италии
-                <input type="number" id="bank-days" min="1" value="7" />
-              </label>
-              <label>Человек в поездке
-                <input type="number" id="bank-people" min="1" value="1" />
-              </label>
+          <div class="accordion">
+            <button type="button" class="accordion-btn" aria-expanded="false" data-acc="bank">
+              Сумма для выписки
+              <span class="chev" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-panel" id="acc-bank" hidden>
+              <div class="calc-grid">
+                <label>Дней в Италии
+                  <input type="number" id="bank-days" min="1" value="7" />
+                </label>
+                <label>Человек в поездке
+                  <input type="number" id="bank-people" min="1" value="1" />
+                </label>
+              </div>
+              <p class="calc-note">По итальянской таблице средств на пребывание. Это минимум для обоснования; на практике часто держат запас.</p>
+              <div class="calc-result" id="bank-result"></div>
             </div>
-            <p class="calc-note">По итальянской таблице средств на пребывание. Это минимум для обоснования; на практике часто держат запас.</p>
-            <div class="calc-result" id="bank-result"></div>
           </div>
         </div>
       </div>

@@ -193,13 +193,79 @@ a {
 }
 
 main {
+  width: min(1120px, 100%);
+  margin: 0 auto;
   padding: 0 calc(clamp(1.25rem, 4vw, 3.5rem) + 10px) 4rem;
-  max-width: 1100px;
 }
 
 .section {
   margin-top: 3.5rem;
   padding: 1.75rem 0 0;
+}
+
+@media (min-width: 960px) {
+  .hero {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding-left: calc(clamp(2rem, 5vw, 3.5rem) + 10px);
+    padding-right: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .hero h1 {
+    max-width: 14ch;
+    font-size: clamp(3.5rem, 6vw, 5.6rem);
+  }
+
+  .lede {
+    max-width: 36rem;
+    font-size: 1.3rem;
+  }
+
+  .flag-mark {
+    width: 280px;
+    height: 64px;
+    right: clamp(2rem, 8vw, 5rem);
+    bottom: 18%;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .timeline li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .quiz-layout {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 1.5rem;
+  }
+
+  .doc-live {
+    max-height: calc(100vh - 2rem);
+    overflow: auto;
+  }
+
+  .tools-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .tools-row .accordions {
+    display: contents;
+  }
+
+  .section-help .help-calc {
+    max-width: 560px;
+  }
+
+  .footer {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+  }
 }
 
 .section h2 {
@@ -470,7 +536,6 @@ input[type="number"] {
 
 .footer {
   padding: 2rem calc(clamp(1.25rem, 4vw, 3.5rem) + 10px) 3rem;
-  max-width: 1100px;
   color: var(--muted);
   font-size: 0.9rem;
 }
