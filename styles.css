@@ -52,7 +52,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 33svh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -88,7 +88,7 @@ a {
   z-index: 1;
   width: min(1120px, 100%);
   margin: 0 auto;
-  padding: 4.5rem clamp(1.25rem, 4vw, 3.5rem) 3.2rem calc(clamp(1.25rem, 4vw, 3.5rem) + 10px);
+  padding: 1.6rem clamp(1.25rem, 4vw, 3.5rem) 1.4rem calc(clamp(1.25rem, 4vw, 3.5rem) + 10px);
 }
 
 .hero-top {
@@ -96,7 +96,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.45rem;
   max-width: 42rem;
 }
 
@@ -125,11 +125,11 @@ a {
 
 .hero h1 {
   margin: 0;
-  max-width: 12ch;
+  max-width: 14ch;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(2.6rem, 8vw, 5.2rem);
-  line-height: 1.05;
+  font-size: clamp(1.7rem, 4.2vw, 2.6rem);
+  line-height: 1.08;
   letter-spacing: -0.02em;
   color: #fffaf3;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
@@ -233,17 +233,13 @@ main {
   .hero-content {
     padding-left: calc(clamp(2rem, 5vw, 3.5rem) + 10px);
     padding-right: clamp(2rem, 5vw, 3.5rem);
-    padding-bottom: 4rem;
+    padding-bottom: 1.6rem;
+    padding-top: 1.8rem;
   }
 
   .hero h1 {
-    max-width: 14ch;
-    font-size: clamp(3.5rem, 6vw, 5.6rem);
-  }
-
-  .lede {
-    max-width: 36rem;
-    font-size: 1.3rem;
+    max-width: 16ch;
+    font-size: clamp(2rem, 3.2vw, 2.8rem);
   }
 
   .quiz-layout {
